@@ -1,0 +1,132 @@
+:root {
+  // Colors
+
+  // Primary
+
+  --Green400: hsl(172, 67%, 45%);
+
+  // Neutral
+
+  --Green900: hsl(183, 100%, 15%);
+  --Grey500: hsl(186, 14%, 43%);
+  --Grey400: hsl(184, 14%, 56%);
+  --Grey200: hsl(185, 41%, 84%);
+  --Grey50: hsl(189, 47%, 97%);
+  --White: hsl(0, 100%, 100%);
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@mixin flex($direction) {
+  display: flex;
+  flex-direction: column;
+  align-items: $direction;
+  justify-content: $direction;
+}
+
+.body {
+  background-color: var(--Grey200);
+  @include flex(center);
+  font-size: 24px;
+  height: 100vh;
+}
+
+.main-container {
+  background-color: var(--Grey200);
+  @include flex(center);
+}
+
+.logo {
+  // position: fixed;
+  // top: 0;
+  // right: 0;
+  // left: 0;
+  padding: 3rem;
+  @include flex(center);
+}
+
+.calculator-container {
+  width: 23.4375rem;
+  border-radius: 20px;
+  background-color: var(--White);
+  font-size: 16px;
+}
+
+.input-section {
+  padding: 2rem;
+
+  p {
+    margin: 10px 0;
+  }
+}
+
+.input {
+  width: 100%;
+  background-color: var(--Grey50);
+  padding: 5px 15px;
+  margin-top: 10px;
+  margin-bottom: 25px;
+  border-radius: 5px;
+  display: inline-flex;
+  align-items: center;
+
+  img {
+    width: 10px;
+    // height: 18px;
+  }
+}
+
+.input input[type="text"] {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  font-size: 24px;
+  font-weight: 700;
+  text-align: right;
+  width: 100%;
+}
+
+.select-buttons {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1rem;
+  width: 100%;
+  margin-block: 1rem;
+}
+
+.input-btn {
+  padding: 10px 0;
+  font-size: 24px;
+  font-weight: 700;
+  width: 47%;
+  background-color: var(--Green900);
+  color: var(--White);
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+.active {
+  background-color: var(--Green400);
+}
+
+.custom-btn {
+  background-color: var(--Grey50);
+  color: var(--Grey500);
+}
+
+// Tip-display-section styling
+.tip-display-section {
+  background-color: var(--Green900);
+  color: var(--White);
+  padding: 1rem;
+  margin: 1.5rem;
+  border-radius: 10px;
+}
