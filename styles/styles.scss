@@ -43,19 +43,25 @@
 }
 
 .logo {
-  // position: fixed;
-  // top: 0;
-  // right: 0;
-  // left: 0;
   padding: 3rem;
   @include flex(center);
 }
 
 .calculator-container {
   width: 23.4375rem;
-  border-radius: 20px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
   background-color: var(--White);
   font-size: 16px;
+
+  .select-tip {
+    margin-top: 2rem;
+  }
+
+  .select-tip,
+  label {
+    font-weight: 700;
+  }
 }
 
 .input-section {
@@ -66,15 +72,16 @@
   }
 }
 
-.input {
+.bill-amount,
+.people-number {
   width: 100%;
   background-color: var(--Grey50);
   padding: 5px 15px;
   margin-top: 10px;
-  margin-bottom: 25px;
   border-radius: 5px;
   display: inline-flex;
   align-items: center;
+  cursor: pointer;
 
   img {
     width: 10px;
@@ -82,7 +89,8 @@
   }
 }
 
-.input input[type="text"] {
+.bill-amount input[type="text"],
+.people-number input[type="text"] {
   border: none;
   outline: none;
   background-color: transparent;
@@ -90,6 +98,7 @@
   font-weight: 700;
   text-align: right;
   width: 100%;
+  cursor: pointer;
 }
 
 .select-buttons {
@@ -99,13 +108,14 @@
   gap: 1rem;
   width: 100%;
   margin-block: 1rem;
+  margin-block-end: 2rem;
 }
 
 .input-btn {
   padding: 10px 0;
   font-size: 24px;
   font-weight: 700;
-  width: 47%;
+  width: 9.21983rem;
   background-color: var(--Green900);
   color: var(--White);
   border-radius: 5px;
@@ -120,6 +130,9 @@
 .custom-btn {
   background-color: var(--Grey50);
   color: var(--Grey500);
+  text-align: right;
+  outline: none;
+  padding-right: 10px;
 }
 
 // Tip-display-section styling
@@ -128,5 +141,82 @@
   color: var(--White);
   padding: 1rem;
   margin: 1.5rem;
+  margin-top: 0;
   border-radius: 10px;
+}
+
+.tip-result {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: end;
+  margin-block: 1.5rem;
+
+  p {
+    color: var(--Grey500);
+  }
+
+  .amount {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--Green400);
+  }
+
+  .tip-header {
+    color: var(--White);
+  }
+}
+
+.reset-button {
+  width: 100%;
+  padding: 1rem;
+  margin-top: 0.5rem;
+  background-color: var(--Green400);
+  color: var(--Green900);
+  font-weight: 700;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+}
+
+footer {
+  font-size: 11px;
+  text-align: center;
+  margin-bottom: 0.5rem;
+
+  .attribution a {
+    color: hsl(228, 45%, 44%);
+  }
+}
+
+// Media Query for Bigger Screen
+@media (min-width: 785px) {
+  .main-container {
+    height: 100vh;
+  }
+  .calculator-container {
+    width: 800px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    border-radius: 20px;
+  }
+
+  .select-buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .input-btn {
+    width: 7rem;
+  }
+
+  .tip-display-section {
+    margin: 1.5rem;
+    margin-left: 0;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
 }
