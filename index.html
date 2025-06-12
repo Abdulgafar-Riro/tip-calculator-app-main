@@ -8,6 +8,8 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="./styles/styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+
 
   <title>Frontend Mentor | Tip calculator app</title>
 
@@ -23,23 +25,29 @@
         <label>Bill</label>
         <div class="bill-amount billAmount">
           <img src="./images/icon-dollar.svg" alt="icon for dollar">
-          <input type="text" placeholder="0">
+          <input type="text" placeholder="0" class="bill-input">
         </div>
+
         <p class="select-tip">Select Tip %</p>
-        <div class="select-buttons">
+
+        <div class="select-buttons" id="tip-options">
           <button class="input-btn tipPercentage" type="button">5%</button>
           <button class="input-btn tipPercentage" type="button">10%</button>
           <button class="input-btn tipPercentage" type="button">15%</button>
           <button class="input-btn tipPercentage" type="button">25%</button>
           <button class="input-btn tipPercentage" type="button">50%</button>
-          <input type="text" placeholder="Custom" class="input-btn tipPercentage custom-btn">
+          <input type="text" placeholder="Custom" class="input-btn custom-btn">
         </div>
 
-        <label>Number of People</label>
+        <label for="people-input">
+          Number of People
+          <span class="error-msg">Can’t be zero</span>
+        </label>
         <div class="people-number input">
           <img src="./images/icon-person.svg" alt="icon of a person">
-          <input class="numPeople" type="text" placeholder="0">
+          <input id="people-input" class="people-input" type="text" placeholder="0">
         </div>
+
       </section>
 
       <section class="tip-display-section">
@@ -50,7 +58,7 @@
               <p>/ person</p>
             </div>
             <div class="right-side">
-              <p class="amount">$0.00</p>
+              <p class="amount tipAmount">$0.00</p>
             </div>
           </div>
 
@@ -60,7 +68,7 @@
               <p>/ person</p>
             </div>
             <div class="right-side">
-              <p class="amount">$0.00</p>
+              <p class="amount totalAmount">$0.00</p>
             </div>
           </div>
         </div>
@@ -71,9 +79,10 @@
     </div>
     <footer class="attribution">
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-      Coded by <a href="#">Your Name Here</a>.
+      Coded by <a href="#">WebMujahid &copy 2025.</a>
     </footer>
   </main>
+  <script src="./scripts/main.js"></script>
 </body>
 
 </html>
