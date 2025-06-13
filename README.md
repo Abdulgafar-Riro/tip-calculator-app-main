@@ -36,8 +36,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Add solution URL here](https://github.com/Abdulgafar-Riro/tip-calculator-app-main)
+- Live Site URL: [Add live site URL here](https://webmujahid-tip-calculator-app.netlify.app/)
 
 ---
 
@@ -73,26 +73,25 @@ function validatePeopleInput() {
     return true;
   }
 }
-Continued development
+```
+
+### Continued development
+
 In the future, I would like to:
 
-Refactor parts of the JS to make them more modular
+- Refactor parts of the JS to make them more modular
+- Add keyboard accessibility for button focus
+- Store and retrieve the last used values using localStorage
+- Convert this into a reusable React component
 
-Add keyboard accessibility for button focus
+### Useful resources
 
-Store and retrieve the last used values using localStorage
+- [MDN Web Docs](https://developer.mozilla.org/) — Always helpful for native JS methods.
+- [Frontend Mentor Community](https://www.frontendmentor.io/community) — For inspiration and guidance on similar solutions.
 
-Convert this into a reusable React component
+---
 
-Useful resources
-MDN Web Docs — Always helpful for native JS methods.
+## Author
 
-Frontend Mentor Community — For inspiration and guidance on similar solutions.
-
-Author
-Website – YourName
-
-Frontend Mentor – @yourusername
-
-Twitter – @yourusername
-```
+- Frontend Mentor – [@Abdulgafar-Riro] (https://www.frontendmentor.io/profile/Abdulgafar-Riro)
+- Twitter – [@milo4888] (https://www.twitter.com/milo4888)
